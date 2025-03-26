@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Prestasi;
-use App\Models\Kegiatan;
+use App\Models\kegiatan;
 use App\Models\Guru;
 use App\Models\ulasan;
 use Illuminate\Http\Request;
@@ -14,7 +14,7 @@ class PrestasiController extends Controller
     public function index()
     {
         $prestasis = Prestasi::all();
-        $kegiatans = Kegiatan::all();
+        $kegiatans = kegiatan::all();
         $gurus = Guru::all();
         $ulasans = ulasan::all();
         return view('index', compact('prestasis', 'kegiatans','gurus','ulasans'));
